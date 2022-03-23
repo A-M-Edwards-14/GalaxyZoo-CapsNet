@@ -1,1 +1,1 @@
-# GalaxyZoo_CapsNetVsResNet
+# GalaxyZoo_CapsNet
