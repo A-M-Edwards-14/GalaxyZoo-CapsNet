@@ -15,8 +15,15 @@ Project is created with:
 * Pytorch
 * CUDA
 * Torchvision
+* Sys
+* SKimage
+* SKlearn
+* PIL
+* Scipy
+* Matplotlib
+* Seaborn
+* Numpy
 * Pandas
-* ETC
 	
 ## Data
 [Kaggle SDSS](https://www.kaggle.com/competitions/galaxy-zoo-the-galaxy-challenge/data)
