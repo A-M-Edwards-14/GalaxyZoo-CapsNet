@@ -24,6 +24,8 @@ The required packages for this project are:
 * Seaborn
 * Numpy
 * Pandas
+
+This project used 4 CPUs and 1 Tesla V100 GPU on the Lancaster University [High End Computing (HEC) Cluster](https://answers.lancaster.ac.uk/display/ISS/High+End+Computing+%28HEC%29+help).
 	
 ## Data
 [Kaggle SDSS](https://www.kaggle.com/competitions/galaxy-zoo-the-galaxy-challenge/data)
