@@ -11,7 +11,7 @@
 This project investigated the relative abilities of a capsule network and residual network to reproduce the human classifications of galaxy images. This repository provides code that can process the required image data into the necessary data frame, train both models, evaluate their classification accuracies and test their abilities to reproduce well known physical results related to galaxy evolution.
 	
 ## Required Packages and Technologies
-Project is created with:
+The required packages for this project are:
 * Pytorch
 * CUDA
 * Torchvision
