@@ -30,7 +30,7 @@ This project also used 4 CPUs and 1 Tesla V100 GPU on the Lancaster University [
 ## Data
 All datasets used in this project can be downloaded from the following locations:
 
-* The SDSS galaxy images and their corresponding labels used can be found on [Kaggle](https://www.kaggle.com/competitions/galaxy-zoo-the-galaxy-challenge/data), the provided 61578 RGB images. For access to the complete labelled dataset of SDSS galaxy images refer to the [Galaxy Zoo](https://data.galaxyzoo.org/).
+* The SDSS galaxy images and their corresponding labels used can be found on [Kaggle](https://www.kaggle.com/competitions/galaxy-zoo-the-galaxy-challenge/data) which provided 61578 RGB images in total. For access to the complete labelled dataset of SDSS galaxy images refer to the [Galaxy Zoo](https://data.galaxyzoo.org/).
 
 * The higher resolution DECaLS galaxy images and their corresponding labels can be found on [Zenodo](https://zenodo.org/record/4196267#.YqiMJqHMLIU).
 
