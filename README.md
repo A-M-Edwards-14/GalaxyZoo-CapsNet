@@ -8,7 +8,7 @@
 * [Acknowledgments](#acknowledgments)
 
 ## Project Overview
-This project investigated the relative abilities of a capsule network and residual network to reproduce the human classifications of galaxy images. This repository provides code that can train both models, evaluate their classification accuracies and test their abilities to reproduce well known physical results related to galaxy evolution.
+This project investigated the relative abilities of a capsule network and residual network to reproduce the human classifications of galaxy images. This repository provides code that can process the required image data into the necessary data frame, train both models, evaluate their classification accuracies and test their abilities to reproduce well known physical results related to galaxy evolution.
 	
 ## Required Packages and Technologies
 Project is created with:
@@ -19,11 +19,11 @@ Project is created with:
 * ETC
 	
 ## Data
-[Kaggle SDSS]([https://www.kaggle.com/competitions/galaxy-zoo-the-galaxy-challenge/data])
+[Kaggle SDSS](https://www.kaggle.com/competitions/galaxy-zoo-the-galaxy-challenge/data)
 
 [Full catalog](https://data.galaxyzoo.org/)
 
-[Zenodo DECaLS]([https://zenodo.org/record/4196267#.YqiMJqHMLIU])
+[Zenodo DECaLS](https://zenodo.org/record/4196267#.YqiMJqHMLIU)
 
 [Schawinski](https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJ/711/284#/browse)
 
