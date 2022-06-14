@@ -28,15 +28,15 @@ The required packages for this project are:
 This project also used 4 CPUs and 1 Tesla V100 GPU on the Lancaster University [High End Computing (HEC) Cluster](https://answers.lancaster.ac.uk/display/ISS/High+End+Computing+%28HEC%29+help).
 	
 ## Data
-[Kaggle SDSS](https://www.kaggle.com/competitions/galaxy-zoo-the-galaxy-challenge/data)
+All datasets used in this project can be downloaded from the following locations:
 
-[Full catalog](https://data.galaxyzoo.org/)
+* The SDSS galaxy images and their corresponding labels used can be found on [Kaggle](https://www.kaggle.com/competitions/galaxy-zoo-the-galaxy-challenge/data), the provided 61578 RGB images. For access to the complete labelled dataset of SDSS galaxy images refer to the [Galaxy Zoo](https://data.galaxyzoo.org/).
 
-[Zenodo DECaLS](https://zenodo.org/record/4196267#.YqiMJqHMLIU)
+* The higher resolution DECaLS galaxy images and their corresponding labels can be found on [Zenodo](https://zenodo.org/record/4196267#.YqiMJqHMLIU).
 
-[Schawinski](https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJ/711/284#/browse)
+* The dataset of galaxy colour and total stellar mass was taken from [Schawinski et al. 2010b](https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJ/711/284#/browse).
 
-[Simard](https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJS/196/11#/browse)
+* The galaxy Sersic indicies were downloaded from [Simard et al. 2011](https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJS/196/11#/browse).
 
 
 
