@@ -34,7 +34,7 @@ All datasets used in this project can be downloaded from the following locations
 
 * The higher resolution DECaLS galaxy images and their corresponding labels can be found on [Zenodo](https://zenodo.org/record/4196267#.YqiMJqHMLIU).
 
-* The dataset of galaxy colour and total stellar mass was taken from [Schawinski et al. 2010b](https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJ/711/284#/browse).
+* The sample dataset of galaxy colours and total stellar mass was taken from [Schawinski et al. 2010b](https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJ/711/284#/browse). For the complete dataset of galaxy colours refer to [MPA-JHU](https://www.sdss.org/dr12/spectro/galaxy_mpajhu/) and [NYU VAGC](http://sdss.physics.nyu.edu/vagc/) for the complete dataset of galaxy stellar masses.
 
 * The galaxy Sersic indicies were downloaded from [Simard et al. 2011](https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJS/196/11#/browse).
 
