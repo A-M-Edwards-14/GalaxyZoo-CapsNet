@@ -45,9 +45,19 @@ Describe files
 ```abc```
 
 ### CapsNet
+```CapsNetReconstructor.py``` ```CapsNetRegressor.py``` ```CapsNetPredictor.py```
+
 ### DataAnalysis
+
+
 ### Dataloader
+```Segmenter_Dataloader.py``` ```Dataloader.py```
+
 ### Miscellaneous
+
+
 ### ResNet
+```ResNetRGB.py``` ```ResNetRGBPredict.py``` ```ResNetGrey.py``` ```ResNetGreyPredict.py``` 
+
 ## Acknowledgments
 Project Acknowledgments
