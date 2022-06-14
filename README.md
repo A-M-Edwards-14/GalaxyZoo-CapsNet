@@ -44,10 +44,10 @@ All datasets used in this project can be downloaded from the following locations
 Describe files
 ```abc```
 
-#### CapsNet
-#### DataAnalysis
-#### Dataloader
-#### Miscellaneous
-#### ResNet
+### CapsNet
+### DataAnalysis
+### Dataloader
+### Miscellaneous
+### ResNet
 ## Acknowledgments
 Project Acknowledgments
