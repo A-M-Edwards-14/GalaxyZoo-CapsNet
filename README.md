@@ -59,7 +59,23 @@ Note:
 
 
 ### DataAnalysis
+##AccuracyPlot.py
 
+##ColourBar_Plot.py
+
+##Colour_Mass_Plot.py
+
+##HistogramPlot.py
+
+##KS_Test.py
+
+##ROC_BinaryLabel.py
+
+##ROC_Plotter.py
+
+##ReconstructImages.py
+
+##SersicVotes_Errors.py
 
 ### Dataloader
 The code within the Dataloader folder is used to convert a folder of images into a suitable tensor that can be fed as an input of image data to either the CapsNet or ResNet. 
