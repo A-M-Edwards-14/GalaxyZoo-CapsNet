@@ -47,15 +47,18 @@ Describe files
 ### CapsNet
 The CapsNet folder contains 3 versions of the capsule network code: ```CapsNetReconstructor.py```, ```CapsNetRegressor.py``` and ```CapsNetPredictor.py```
 
-```CapsNetRegressor.py``` is used to train the capsule network to predict the Galaxy Zoo vote fractions corresponding to an image. It accepts input date in the form of [Number of images, Number of colour channels, Image width, Image height] and matches each image in the tensor, by index, to the image label tensor [Number of images, Number of vote fractions]. The network uses an adam optimizer to minimize the mean squared error between the actual vote fractions and the network predicted fractions. The network will output the average value of the mean squared error across all image at each epoch as well as saving the trained set of weights to the EPOCH.NPY file.
+```CapsNetRegressor.py``` is used to train the capsule network to predict the Galaxy Zoo vote fractions corresponding to an image. It accepts input data in the form of a tensor [Number of images, Number of colour channels, Image width, Image height] and matches each image in the tensor, by index, to the image label tensor [Number of images, Number of vote fractions]. The network uses an adam optimizer to minimize the mean squared error between the actual vote fractions and the network predicted fractions. The network will output the average value of the mean squared error across all image at each epoch, as well as saving the trained set of weights to the epoch_%d.pt file.
 
-The ```CapsNetPredictor.py``` allows you to load in the pre-trained weights from the EPCOH.NPY file to predict the vote fractions corresponding to a set of input images to the network. 
+The ```CapsNetPredictor.py``` allows you to load in the pre-trained weights from the epoch_%d.pt file to predict the vote fractions corresponding to a set of input images to the network. 
 
-Note that ```CapsNetPredictor.py``` code failed to work when classifying 1 image with it outputting a 16-dimensional vector rather than the predicted array of vote fractions. However, it works fine when classifying more than one image.
+```CapsNetReconstructor.py``` trains a capsule network to classify a galaxy image as either smooth and rounded, featured or an artefact using binary labels rather than vote fractions. Using the trained set of weights, the network reconstructs the images giving a visualisation of the features that the capsule network is able to detect to classify images. 
 
-```CapsNetReconstructor.py``` trains a capsule network to classify a galaxy image as either smooth and rounded, featured or an artefact using binary labels rather than vote fractions. Then using the trained weights reconstructs the images giving a visualisation of the features that the capsule network is able to detect and use to classify images. 
 
-Note: if training or classifying RGB images change ‘in_channels = 3’, if using greyscale images set ‘in_channels =1’.
+Note:
+
+* If training or classifying RGB images change ‘in_channels = 3’, if using greyscale images set ‘in_channels =1’.
+
+* ```CapsNetPredictor.py``` code failed to work when classifying 1 image with it outputting a 16-dimensional vector rather than the predicted array of vote fractions. However, it works fine when classifying more than one image.
 
 
 ### DataAnalysis
