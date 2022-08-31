@@ -74,7 +74,10 @@ The ```Segmenter_Dataloader.py``` works in an identical manner, expect the trans
 
 
 ### ResNet
-```ResNetRGB.py``` ```ResNetRGBPredict.py``` ```ResNetGrey.py``` ```ResNetGreyPredict.py``` 
+The ResNet folder contains 4 files: ```ResNetRGB.py```, ```ResNetRGBPredict.py```, ```ResNetGrey.py``` and ```ResNetGreyPredict.py```.
+
+```ResNetRGB.py``` and ```ResNetGrey.py``` are the two sets of code used to train the ResNet model in a similar manner to the ```CapsNetRegressor.py```. Both ResNet models include data augmentation such as a series of horizontal and vertical flips, as well as 45-degree rotations, which effectively quadruples the size of the dataset. The trained weights are saved into the ‘epoch_.pt’ file at the end, these pre-trained weights can then be loaded into either ```ResNetRGBPredict.py``` or ```ResNetGreyPredict.py``` to obtain the predicted vote fractions corresponding to a galaxy image (whether that image is an RGB or greyscale image).
+ 
 
 ## Acknowledgments
 Project Acknowledgments
