@@ -41,9 +41,6 @@ All datasets used in this project can be downloaded from the following locations
 
 
 ## Files
-Describe files
-```abc```
-
 ### CapsNet
 The CapsNet folder contains 3 versions of the capsule network code: ```CapsNetReconstructor.py```, ```CapsNetRegressor.py``` and ```CapsNetPredictor.py```
 
