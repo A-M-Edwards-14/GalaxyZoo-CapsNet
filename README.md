@@ -65,7 +65,13 @@ Note:
 
 
 ### Dataloader
-```Segmenter_Dataloader.py``` ```Dataloader.py```
+The code within the Dataloader folder is used to convert a folder of images into a suitable tensor that can be fed as an input of image data to either the CapsNet or ResNet. 
+
+For both the ```Segmenter_Dataloader.py``` and ```Dataloader.py``` a directory that will contain all the galaxy images must be specified (‘root_dir=’), as well as the relative file paths/names of each image in that directory. The CSV file, loaded as ‘csv_file=’, must have the first column containing the relative file paths/names of all the images in the image directory. It is also useful to have the other columns in this CSV file corresponding to the vote fractions for each galaxy image. A series of transforms are applied to each image in order to crop them and convert them into a tensor format. Each image tensor is then appended to a list, such that each entry in the list corresponds to a single image tensor. The end result is an .npy file containing all the image data with a shape: [Number of images, Number of colour channels, Image width, Image Height].
+
+The ```Segmenter_Dataloader.py``` works in an identical manner, expect the transforms applied to each image also includes Otsu’s thresholding method which acts to remove the image background.
+
+
 
 ### Miscellaneous
 
