@@ -60,22 +60,31 @@ Note:
 
 ### DataAnalysis
 **AccuracyPlot.py**
+Converts the mean squared error at each epoch into an accuracy and plots how the classification accuracy of a model varies against the number of epochs it is ran for.
 
 **ColourBar_Plot.py**
+Plots the Galaxy Zoo vote fraction for a given class against the CapsNet (or ResNet) predicted vote fraction. Each plotted point is colour coded such that the colour represents its Sersic index.
 
 **Colour_Mass_Plot.py**
+Creates a colour-mass plot for a sample of galaxies. Instead of representing the galaxy distribution as a scatter plot, contour lines which denote the density of point on the scatter plot are used.
 
 **HistogramPlot.py**
+Plots the distribution of galaxies in a sample by their vote fraction for a given class. Particularly useful when trying to match the distribution of DECaLS and SDSS image datasets for consistency.
 
 **KS_Test.py**
+Performs both the KS test and Anderson-Darling test between two datasets to determine whether the two datasets are drawn from the same parent distribution. In this particular example, galaxies that are red in colour and classified as smooth by the Galaxy Zoo are compared to galaxies that are red in colour and classified as smooth by the CapsNet.
 
 **ROC_BinaryLabel.py**
+Creates an ROC curve using Galaxy Zoo classifications that have been rounded into a binary form, while the CapsNet predictions are left in float form. In the example provided all Galaxy Zoo classifications are rounded to a 0.5 threshold, meaning vote fractions above 0.5 are taken as 1 and those below are taken as 0. The ROC curve is the created as normal with the CapsNet vote fractions being rounded at each possible threshold and then compared to these fixed Galaxy Zoo labels.
 
 **ROC_Plotter.py**
+Creates an ROC curve that doesn't require either the Galaxy Zoo or CapsNet predictions to be rounded prior. Instead, both sets of vote fractions are simultaneously rounded and compared at every single rounding threshold.
 
 **ReconstructImages.py**
+Plots the reconstructed images from ```CapsNetReconstructor.py``` into a grid format to make comparisons between different epochs easier.
 
 **SersicVotes_Errors.py**
+Plots the difference between the Galaxy Zoo and CapsNet vote fraction for a given classification. This difference is then plotted against Sersic index to demonstrate how the classification error of the CapsNet varies with Sersic index. Each point is assigned a colour (red, blue or green) depending on its location on the colour-mass plot. 
 
 ### Dataloader
 The code within the Dataloader folder is used to convert a folder of images into a suitable tensor that can be fed as an input of image data to either the CapsNet or ResNet. 
