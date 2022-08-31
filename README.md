@@ -115,3 +115,5 @@ The ResNet folder contains 4 files: ```ResNetRGB.py```, ```ResNetRGBPredict.py``
 
 ## Acknowledgments
 Project Acknowledgments
+
+The capsule network used in this project was based and adapted from the model create by [Reza Katebi](https://arxiv.org/abs/1809.08377) which is available [here](https://github.com/RezaKatebi/Galaxy-Morphology-CapsNet).
