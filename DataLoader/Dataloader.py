@@ -21,8 +21,7 @@ class SDSSData(Dataset):
         Args:
             csv_file (string): Path to the csv file with annotations.
             root_dir (string): Directory with all the images.
-            transform (callable, optional): Optional transform to be applied
-                on a sample.
+            transform (callable, optional): Optional transform to be applied on a sample.
         """ 
         self.annotations = pd.read_csv(csv_file)
         self.root_dir = root_dir
@@ -36,7 +35,7 @@ class SDSSData(Dataset):
         return len(self.annotations) #number of images/Entries in csv file
 
 
-    #This will return a given image and a corrosponding index for the image
+    #This will return a given image and a corresponding index for the image
     #__getitem__ to support the indexing such that dataset[i] can be used to get ith sample.
     def __getitem__(self, index):
         img_path = os.path.join(self.root_dir, self.annotations.iloc[index, 0])
@@ -55,11 +54,9 @@ class SDSSData(Dataset):
 # root_dir='../SDSS/images', 
 # transform=transforms.Compose([transforms.ToTensor(), transforms.CenterCrop((216,216)), transforms.Resize((72,72)), transforms.Grayscale(num_output_channels=1), transforms.ToPILImage()]))
 
-transformed_dataset = SDSSData(csv_file='../Data/ImageFilePaths.csv', 
-root_dir='../Data/images',
-transform=transforms.Compose([transforms.ToTensor(), transforms.CenterCrop((216,216)), transforms.Resize((72,72)), transforms.Grayscale(num_output_channels=1), transforms.ToPILImage()]))
+transformed_dataset = SDSSData(csv_file='../Data/ImageFilePaths.csv', root_dir='../Data/images', transform=transforms.Compose([transforms.ToTensor(), transforms.CenterCrop((216,216)), transforms.Resize((72,72)), transforms.Grayscale(num_output_channels=1), transforms.ToPILImage()]))
 
-list=[]
+list = []
 for i in range(len(transformed_dataset)):
     images = transformed_dataset[i]
     npimages = images.numpy()
@@ -67,7 +64,3 @@ for i in range(len(transformed_dataset)):
     print(i)
 
 np.save('../ImageFile/SDSSImageData', list)
-    
-
-
-

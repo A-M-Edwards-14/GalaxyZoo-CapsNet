@@ -1,3 +1,4 @@
+"""Loads in the pre-trained weights from the epoch_%d.pt file to predict the vote fractions corresponding to a set of input images to the network."""
 import sys
 sys.setrecursionlimit(15000)
 

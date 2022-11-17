@@ -1,3 +1,4 @@
+# Morph_Reger/code/CapNet.py in Katebi
 import sys
 sys.setrecursionlimit(15000)
 import torch
@@ -8,16 +9,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
 BATCH_SIZE = 5
-NUM_CLASSES = 34 #Ig DECaLS data
+NUM_CLASSES = 34 #If DECaLS data
 #NUM_CLASSES = 37 #If SDSS data
 NUM_EPOCHS = 30
 NUM_ROUTING_ITERATIONS = 3
 
-#softmax layer which converts arbitary outputs of neural network into an exponetially normalized probability.
+#softmax layer which converts arbitrary outputs of neural network into an exponentially normalized probability.
 def softmax(input, dim=1):
     transposed_input = input.transpose(dim, len(input.size()) - 1)
-    softmaxed_output = F.softmax(transposed_input.contiguous().view(-1,
-                                                                    transposed_input.size(-1)), dim=-1)
+    softmaxed_output = F.softmax(transposed_input.contiguous().view(-1, transposed_input.size(-1)), dim=-1)
     return softmaxed_output.view(*transposed_input.size()).transpose(dim, len(input.size()) - 1)
 
 #Data augmentation, this increases size of dataset by processing pre-existing data.
@@ -40,8 +40,7 @@ def augmentation(x, max_shift=2):
 
 
 class CapsuleLayer(nn.Module):
-    def __init__(self, num_capsules, num_route_nodes, in_channels, out_channels, kernel_size=None, stride=None,
-                 num_iterations=NUM_ROUTING_ITERATIONS):
+    def __init__(self, num_capsules, num_route_nodes, in_channels, out_channels, kernel_size=None, stride=None, num_iterations=NUM_ROUTING_ITERATIONS):
         super(CapsuleLayer, self).__init__()
 
         self.num_route_nodes = num_route_nodes
@@ -110,7 +109,7 @@ class CapsuleNet(nn.Module):
 
 
 
-#This class calculates the loss (the error) of each ouput
+#This class calculates the loss (the error) of each output
 class CapsuleLoss(nn.Module):
     def __init__(self):
         super(CapsuleLoss, self).__init__()
@@ -150,8 +149,7 @@ if __name__ == "__main__":
         X = np.load('../DECaLS/Data/Decals_SegmentedBlurred_ImageData.npy')
         #Load corresponding labels
         y = np.load('../DECaLS/Data/Decals_Segmented_Votes_61563.npy')
-        X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=0.2, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
         if mode:
             data = torch.from_numpy(X_train).float()
@@ -225,4 +223,3 @@ if __name__ == "__main__":
 
     np.save("../DECaLS/Results/DecalsSegment_train_losses", train_losses)
     np.save("../DECaLS/Results/DecalsSegment_test_losses", test_losses)
-

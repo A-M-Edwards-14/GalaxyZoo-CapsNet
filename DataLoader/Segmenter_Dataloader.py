@@ -37,7 +37,7 @@ class DecalsData(Dataset):
         return len(self.annotations) #number of images/Entries in csv file
 
 
-    #This will return a given image and a corrosponding index for the image
+    #This will return a given image and a corresponding index for the image
     #__getitem__ to support the indexing such that dataset[i] can be used to get ith sample.
     def __getitem__(self, index):
         img_path = os.path.join(self.root_dir, self.annotations.iloc[index, 0])
@@ -76,5 +76,3 @@ for i in range(len(transformed_dataset)):
     print(i)
     
 np.save('../Decals/Data/Decals_SegmentedBlurred_ImageData.npy', list)
-
-
